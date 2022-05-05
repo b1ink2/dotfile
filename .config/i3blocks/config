@@ -1,0 +1,19 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+
+# Global properties
+separator=true
+separator_block_width=15
+
+[greetings]
+command=echo "$(curl -sL https://v1.hitokoto.cn/\?encode\=json | jq '.hitokoto')" 
+interval=300
+
+[time]
+command=date '+%Y-%m-%d %H:%M'
+interval=1
