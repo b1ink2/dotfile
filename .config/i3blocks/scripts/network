@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#Colors
+RED="#f7768e"
+GREEN="#9aa5ce"
+
+text=$(nmcli device | sed -n '2p' | awk '{print $4" "$3}')
+echo $text | awk '{print $1}'
+echo
+
+[ $(awk '{print $2}' <<< $text) = "connected" ] && echo $GREEN && exit 0
+echo $RED && exit 0

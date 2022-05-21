@@ -1,0 +1,5 @@
+#!/bin/bash
+url=https://v1.hitokoto.cn/\?c\=a\&c\=c\&c\=d\&c\=h\&\=i\&encode\=json
+file=$( curl -sL $url)
+HITOKOTO=$(echo $file | jq '.hitokoto')
+echo $HITOKOTO

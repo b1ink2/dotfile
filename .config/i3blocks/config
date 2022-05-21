@@ -8,12 +8,37 @@
 
 # Global properties
 separator=true
-separator_block_width=15
+separator_block_width=10
 
 [greetings]
 command=echo "$(curl -sL https://v1.hitokoto.cn/\?encode\=json | jq '.hitokoto')" 
 interval=300
+color=#9aa5ce
+
+[network]
+label= 
+command=./scripts/network
+interval=1
+color=#9aa5ce
+
+[i3volume]
+label= 
+command=./scripts/i3-volume/volume output i3blocks
+interval=once
+signal=10
+color=#9aa5ce
+# separator_block_width=10
+markup=pango
+
+[battery]
+command=echo "$( ./scripts/battery )"
+markup=pango
+instance=BAT0
+interval=30
+color=#9aa5ce
 
 [time]
-command=date '+%Y-%m-%d %H:%M'
-interval=1
+command=date '+%m-%d %H:%M'
+interval=10
+color=#9aa5ce
+
