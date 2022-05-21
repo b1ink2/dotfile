@@ -29,22 +29,23 @@ filetype indent on
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'jacoborus/tender.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'prabirshrestha/vim-lsp'
+Plug 'ghifarit53/tokyonight-vim'
+Plug 'jayli/vim-easycomplete'
+Plug 'SirVer/ultisnips'
+Plug 'williamboman/nvim-lsp-installer'
 
 call plug#end()
 
 " THEME
 syntax enable
-colorscheme tender
+set termguicolors
 
-let g:airline_theme = 'tender'
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+colorscheme tokyonight
+let g:airline_theme = "tokyonight"
 
 " LEADER
 let mapleader="\<space>"
@@ -66,13 +67,4 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 
-" LSP
-if executable('pyls')
-    " pip install python-language-server
-    au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'whitelist': ['python'],
-        \ })
-endif
 

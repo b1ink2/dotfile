@@ -1,0 +1,4 @@
+configuration {
+	font:"FiraCode Nerd Font 14";
+	combi-modi:"window,drun";
+}
