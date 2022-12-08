@@ -27,14 +27,16 @@ set autoindent
 syntax on
 filetype indent on
 
+" vim-plug
 call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'jayli/vim-easycomplete'
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 Plug 'williamboman/nvim-lsp-installer'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 call plug#end()
 
@@ -67,4 +69,6 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 
-
+" markdown
+let g:mkdp_auto_start = 1
+let g:mkdp_browser = "microsoft-edge-stable"

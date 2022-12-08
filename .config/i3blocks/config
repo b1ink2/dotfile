@@ -24,7 +24,7 @@ color=#9aa5ce
 [i3volume]
 label= 
 command=./scripts/i3-volume/volume output i3blocks
-interval=once
+interval=1
 signal=10
 color=#9aa5ce
 # separator_block_width=10

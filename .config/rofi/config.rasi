@@ -1,4 +1,5 @@
 configuration {
-	font:"FiraCode Nerd Font 14";
+	font:"CodeNewRoman Nerd Font 14";
 	combi-modi:"window,drun";
 }
+@theme "/home/b1ink/.local/share/rofi/themes/simple-tokyonight.rasi"
