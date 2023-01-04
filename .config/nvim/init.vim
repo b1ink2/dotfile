@@ -71,4 +71,4 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 
 " markdown
 let g:mkdp_auto_start = 1
-let g:mkdp_browser = "microsoft-edge-stable"
+let g:mkdp_browser = "firefox"
