@@ -6,18 +6,13 @@ vim.call('plug#begin')
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-lualine/lualine.nvim'
 
-
 Plug 'jayli/vim-easycomplete'
 Plug 'SirVer/ultisnips'
-
-
-
 
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'folke/tokyonight.nvim'
 
 vim.call('plug#end')
-
 
 -- nvim-tree
 vim.g.loaded_netrw = 1
